@@ -1,0 +1,8 @@
+{
+  "name": "<%= projectName %>",
+  "version": "<%= projectVersion %>",
+  "author": "<%= projectAuthor %>",
+  "keywords": <%= JSON.stringify(projectPkg.keywords, null, 2) %>,
+  "dependencies": <%= JSON.stringify(projectPkg.dependencies, null, 2) %>,
+  "devDependencies": <%= JSON.stringify(projectPkg.devDependencies, null, 2) %>
+}

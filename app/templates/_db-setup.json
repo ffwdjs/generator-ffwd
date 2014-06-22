@@ -1,0 +1,5 @@
+{
+  "prod": "mysql://<%= _.underscored(projectName) %>:insecure@localhost/<%= _.underscored(projectName) %>_prod",
+  "dev": "mysql://<%= _.underscored(projectName) %>:insecure@localhost/<%= _.underscored(projectName) %>_dev",
+  "test": "mysql://<%= _.underscored(projectName) %>:insecure@localhost/<%= _.underscored(projectName) %>_test"
+}

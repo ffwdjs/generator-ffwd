@@ -1,0 +1,21 @@
+---
+docs/setup:
+  title: Setup
+
+docs/concepts:
+  title: Concepts
+  links:
+
+    docs/features-system:
+      title: Features System
+
+docs/features:
+  title: Features
+
+docs/client:
+  title: Client API
+
+docs/server:
+  title: Server API
+
+---
