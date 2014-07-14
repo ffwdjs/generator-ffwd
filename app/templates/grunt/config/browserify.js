@@ -15,13 +15,13 @@ module.exports = {
 
   prod: {
     files: {
-      '<%= pkg.ffwd.dist %>/<%= pkg.name %>.js': ['./client/scripts/index.js']
+      '<%= pkg.ffwd.dist %>/scripts/<%= pkg.name %>.js': ['./client/scripts/index.js']
     }
   },
 
   dev: {
     files: {
-      '<%= pkg.ffwd.dist %>/<%= pkg.name %>.js': ['./client/scripts/index.js']
+      '<%= pkg.ffwd.dist %>/scripts/<%= pkg.name %>.js': ['./client/scripts/index.js']
     }
   }
 };

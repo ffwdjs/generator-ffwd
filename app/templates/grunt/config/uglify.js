@@ -7,7 +7,7 @@ module.exports = function(config) {
 
     prod: {
       files: {
-        '<%= pkg.ffwd.dist %>/<%= pkg.name %>.min.js': ['<%= pkg.ffwd.dist %>/<%= pkg.name %>.js']
+        '<%= pkg.ffwd.dist %>/scripts/<%= pkg.name %>.min.js': ['<%= pkg.ffwd.dist %>/scripts/<%= pkg.name %>.js']
       }
     }
   };

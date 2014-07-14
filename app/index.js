@@ -170,6 +170,13 @@ var FFWDAppGenerator = yeoman.generators.Base.extend({
     // could be "less" or "compass"
     if (this.stylesCompiler && this.stylesCompiler != 'none') {
       this.copy('grunt/config/'+ this.stylesCompiler +'.js', 'grunt/config/'+ this.stylesCompiler +'.js');
+
+      if (this.stylesCompiler === 'compass') {
+        this.mkdir('client/sass');
+      }
+      else {
+        this.mkdir('client/less');
+      }
     }
 
     // could be "requirejs" or "browserify"
@@ -180,7 +187,9 @@ var FFWDAppGenerator = yeoman.generators.Base.extend({
 
       if (this.scriptsCompiler === 'requirejs') {
         this.template('client/scripts/_requirejs-conf.js', 'client/scripts/requirejs-conf.js');
-
+      }
+      else {
+        this.copy('grunt/config/uglify.js', 'grunt/config/uglify.js');
       }
     }
 

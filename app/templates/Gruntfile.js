@@ -79,11 +79,11 @@ module.exports = function (grunt) {
     grunt: grunt
   });
   grunt.initConfig(config);
-
+  
+  
   grunt.registerTask('develop', [
     'build:dev',
-    'express:dev',
-    'watch'
+    'express:dev'
   ]);
 
   grunt.registerTask('default', [
@@ -92,7 +92,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'build',
-    'express:prod',
-    'express-keepalive'
+    'express:prod'
   ]);
 };

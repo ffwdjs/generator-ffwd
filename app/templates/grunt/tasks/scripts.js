@@ -11,17 +11,14 @@ module.exports = function(grunt) {
     target = target || 'prod';
     var tasks = [];
     var pkg = grunt.config().pkg;
-    var name = pkg.ffwd.scriptsCompiler;
+    var scriptsCompiler = pkg.ffwd.scriptsCompiler;
+    var stylesCompiler = pkg.ffwd.stylesCompiler;
 
-    if (name && name !== 'none') {
-      tasks.push(name +':'+ target);
-
-      if (name === 'requirejs') {
-        // should do some magick for requirejs...
-      }
-      else {
-        // do some magick for browserify...
-        tasks.push('uglify');
+    if (scriptsCompiler && scriptsCompiler != 'none') {
+      tasks.push(scriptsCompiler +':'+ target);
+      
+      if (scriptsCompiler === 'requirejs' && stylesCompiler && stylesCompiler != 'none') {
+        tasks.push(stylesCompiler +':'+ target);
       }
     }
 

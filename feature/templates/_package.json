@@ -2,6 +2,8 @@
   "name": "<%= projectName %>",
   "version": "<%= projectVersion %>",
   "author": "<%= projectAuthor %>",
+  "main": "client/scripts/index.js",
+  "browser": "client/scripts/index.js",
   "keywords": <%= JSON.stringify(projectPkg.keywords, null, 2) %>,
   "dependencies": <%= JSON.stringify(projectPkg.dependencies, null, 2) %>,
   "devDependencies": <%= JSON.stringify(projectPkg.devDependencies, null, 2) %>

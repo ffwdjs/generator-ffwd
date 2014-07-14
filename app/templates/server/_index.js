@@ -10,5 +10,7 @@ var utils = require('ffwd-utils/server');
 
 module.exports = function(config) {
   console.info('config', config);
+  var files = utils.loadDirectory();
+  console.info('files', files);
   return {};
 };

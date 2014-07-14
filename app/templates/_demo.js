@@ -21,7 +21,7 @@ var app = require('ffwd-net/server')({
     'ffwd-modeling': true,
     'ffwd-auth': true,
 
-    'example-feature': exampleFeature
+    // 'example-feature': exampleFeature
   }
 });
 

@@ -7,27 +7,30 @@ you probably should not modify it
 */
 
 module.exports = function(config) {
-  config.livereloadPort = config.livereloadPort || (1 + config.port)
+  var serverPort = parseInt(config.port || 9090, 10);
+  var livereloadPort = parseInt(config.livereloadPort || (1 + serverPort), 10);
 
   return {
-    options: {
-      livereload: false,
-      hostname: '*'
-    },
-    
     prod: {
       options: {
-        server: 'app.js'
+        bases:          config.staticDirs || ['dist'],
+        serverreload:   true,
+        hostname:       '*',
+        port:           serverPort,
+        livereload:     livereloadPort || false,
+        server:         'app.js',
       }
     },
 
     dev: {
       options: {
-        server: 'demo.js',
-        livereload: config.livereloadPort,
-        // conflicts with "watch" task...
-        // serverreload: true,
-        showStack: true
+        bases:          config.staticDirs || ['dist'],
+        serverreload:   true,
+        hostname:       '*',
+        port:           serverPort,
+        livereload:     livereloadPort || false,
+        server:         'demo.js',
+        showStack:      true
       }
     }
   };
